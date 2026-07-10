@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز درس - العلوم</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon"href="logo.jpg">
+</head>
+<body>
+    <header class="booking-header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-atom"></i>
+                <span>درس <span>علوم</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="index.html#about"><i class="fas fa-user-tie"></i>  الأستاذ</a></li>
+                <li><a href="index.html#testimonials"><i class="fas fa-quote-right"></i> آراء العملاء</a></li>
+            </ul>
+        </nav>
+        <div class="booking-hero">
+            <h1><i class="fas fa-calendar-plus"></i> حجز درس جديد</h1>
+            <p>املأ النموذج التالي لحجز درس مع الأستاذ/ احمد سمير</p>
+        </div>
+    </header>
+
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-steps">
+                <div class="step active" data-step="1">
+                    <span>1</span>
+                    <p>معلومات الطالب</p>
+                </div>
+                <div class="step" data-step="2">
+                    <span>2</span>
+                    <p>الموعد</p>
+                </div>
+                <div class="step" data-step="3">
+                    <span>3</span>
+                    <p>التأكيد</p>
+                </div>
+            </div>
+            
+            <form id="bookingForm" class="booking-form">
+                <div class="form-section active" id="section1">
+                    <h3><i class="fas fa-user-graduate"></i> معلومات الطالب</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studentName"><i class="fas fa-user"></i> اسم الطالب بالكامل</label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentName"><i class="fas fa-user-friends"></i> اسم ولي الأمر</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="parentPhone"><i class="fas fa-phone"></i> رقم هاتف ولي الأمر</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentEmail"><i class="fas fa-envelope"></i> البريد الإلكتروني (اختياري)</label>
+                            <input type="email" id="studentEmail" name="studentEmail">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="educationLevel"><i class="fas fa-graduation-cap"></i> المرحلة الدراسية</label>
+                            <select id="educationLevel" name="educationLevel" required>
+                                <option value="">اختر المرحلة الدراسية</option>
+                                <option value="primary">المرحلة الابتدائية</option>
+                                <option value="preparatory">المرحلة الإعدادية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade"><i class="fas fa-book"></i> الصف الدراسي</label>
+                            <select id="grade" name="grade" required>
+                                <option value="">اختر الصف الدراسي</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="next-btn">التالي <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="section2">
+                    <h3><i class="fas fa-calendar-alt"></i> تحديد الموعد</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bookingDate"><i class="fas fa-calendar-day"></i> تاريخ الحجز</label>
+                            <input type="date" id="bookingDate" name="bookingDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingTime"><i class="fas fa-clock"></i> وقت الحجز</label>
+                            <select id="bookingTime" name="bookingTime" required>
+                                <option value="">اختر الوقت المناسب</option>
+                                <option value="09:00">9:00 ص - 10:00 ص</option>
+                                <option value="10:00">10:00 ص - 11:00 ص</option>
+                                <option value="11:00">11:00 ص - 12:00 م</option>
+                                <option value="12:00">12:00 م - 1:00 م</option>
+                                 <option value="1:00">1:00 م - 2:00 م</option>
+                                  <option value="2:00">2:00 م - 3:00 م</option>
+                                   <option value="3:00">3:00 م - 4:00 م</option>
+                                <option value="4:00">4:00 م - 5:00 م</option>
+                                <option value="5:00">5:00 م - 6:00 م</option>
+                                <option value="6:00">6:00 م - 7:00 م</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="form-group">
+                        <label for="notes"><i class="fas fa-edit"></i> ملاحظات إضافية (اختياري)</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="prev-btn"><i class="fas fa-arrow-right"></i> السابق</button>
+                        <button type="button" class="next-btn">التالي <i class="fas fa-arrow-left"></i></button>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="section3">
+                    <h3><i class="fas fa-check-circle"></i> تأكيد الحجز</h3>
+                    
+                    <div class="summary-card">
+                        <h4>ملخص الحجز</h4>
+                        <div class="summary-item">
+                            <span class="summary-label">اسم الطالب:</span>
+                            <span class="summary-value" id="summary-studentName"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">ولي الأمر:</span>
+                            <span class="summary-value" id="summary-parentName"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">هاتف ولي الأمر:</span>
+                            <span class="summary-value" id="summary-parentPhone"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">الصف:</span>
+                            <span class="summary-value" id="summary-grade"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">التاريخ:</span>
+                            <span class="summary-value" id="summary-bookingDate"></span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">الوقت:</span>
+                            <span class="summary-value" id="summary-bookingTime"></span>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="form-group terms-group">
+                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                        <label for="agreeTerms">أوافق على <a href="#">الشروط والأحكام</a> و <a href="#">سياسة الخصوصية</a></label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="prev-btn"><i class="fas fa-arrow-right"></i> السابق</button>
+                        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> تأكيد الحجز</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-atom"></i>
+                        <span>دروس<span>علوم</span></span>
+                    </div>
+                    <p>نقدم أفضل خدمات تدريس العلوم للمراحل الابتدائية والإعدادية بأسلوب مبسط وممتع.</p>
+                                        <div class="social-icons">
+         <a href="https://www.facebook.com/share/16KN8qgzTb/?mibextid=wwXIfr&"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/201007478124"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+                        <li><a href="index.html#about"><i class="fas fa-chevron-left"></i>  الأستاذ</a></li>
+                        <li><a href="index.html#testimonials"><i class="fas fa-chevron-left"></i> آراء العملاء</a></li>
+                    </ul>
+                </div>
+               <div class="footer-section">
+                    <h3>اتصل بنا</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 01007478124</li>
+                        <li><i class="fas fa-envelope"></i>ahmedsamirch25@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> العنوان:   سامول -منزل الحاج/سمير عبد العاطي ابو دشيش
+                        -بجوار جامع الزويه </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; <span id="year"></span> دروس علوم. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
