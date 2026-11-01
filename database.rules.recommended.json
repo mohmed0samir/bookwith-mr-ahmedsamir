@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "bookings": {
+      ".read": "auth != null",
+      "$id": {
+        ".write": "auth != null || (!data.exists() && newData.exists())",
+        ".validate": "newData.hasChildren(['studentName','parentName','parentPhone','bookingDate','bookingTime'])"
+      }
+    },
+    "slots": {
+      "$date": {
+        ".read": true,
+        "$slot": {
+          ".write": "auth != null || (!data.exists() && newData.val() === true)",
+          ".validate": "newData.val() === true"
+        }
+      }
+    },
+    "settings": { ".read": "auth != null", ".write": "auth != null" }
+  }
+}
